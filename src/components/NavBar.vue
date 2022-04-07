@@ -3,10 +3,8 @@
   <div class="">
     <menu class="sm:flex sm:mt-3 sm:justify-between sm:text-3xl hidden">
       <li class="p-3">
-        <a href="#">Home</a>
+        <a href="#">Re-Splash 📸</a>
       </li>
-      <li class="p-3"><a href="#">About</a></li>
-      <li class="p-3"><a href="#">Profile</a></li>
     </menu>
   </div>
 <!--Mobile Menu-->
