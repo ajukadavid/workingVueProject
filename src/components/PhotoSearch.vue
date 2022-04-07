@@ -1,6 +1,8 @@
 <template>
   <div>
-    <button @click="getPhotos">Lets see</button>
+    <h2 class="font-sans text-xl mt-2">Search For Your favorite images</h2>
+      <input type="text" placeholder="Type in a keyword and press enter to search" v-model="query" class="mt-4 border-2 p-4 w-96"/>
+      <button @click="showPhotos" class="bg-blue-300 p-4">Search</button>
     <div v-for="(image, index) in images" :key="index">
       <img :src="image"  alt="dog pictures"/>
     </div>
@@ -13,7 +15,8 @@ export default {
   name: 'PhotoDisplay',
   data () {
     return {
-      images: []
+      images: [],
+      query: ''
     }
   },
   methods: {
@@ -23,10 +26,9 @@ export default {
         headers: { 'X-Custom-Header': 'foo' }
       })
       await unsplash.search.getPhotos({
-        query: 'dogs',
+        query: this.query,
         page: 1,
         perPage: 10,
-        color: 'green',
         orientation: 'portrait'
       })
         .then(result => {
@@ -38,6 +40,13 @@ export default {
             })
           }
         })
+    },
+    showPhotos () {
+      if (this.images) {
+        this.images = []
+        return this.getPhotos()
+      }
+      return this.getPhotos()
     }
   }
 }

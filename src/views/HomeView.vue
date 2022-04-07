@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <HomePage />
-    <PhotoDisplay />
+    <PhotoSearch />
   </div>
 </template>
 
@@ -9,11 +9,11 @@
 // @ is an alias to /src
 
 import HomePage from '@/components/HomePage'
-import PhotoDisplay from '@/components/PhotoDisplay'
+import PhotoSearch from '@/components/PhotoSearch'
 export default {
   name: 'HomeView',
   components: {
-    PhotoDisplay,
+    PhotoSearch,
     HomePage
   }
 }
