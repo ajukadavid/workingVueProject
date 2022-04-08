@@ -2,7 +2,8 @@
   <div>
     <h2 class="font-sans text-xl mt-2">Search For Your favorite images</h2>
       <input @keydown.enter="showPhotos" type="text" placeholder="Type in a keyword and press enter to search" v-model="query" class="m-4 border-2 p-4 w-96"/>
-      <button @click="showPhotos" class="bg-blue-300 p-4">Search</button>
+    <button @click="showPhotos" class="bg-blue-300 p-4">Search</button>
+    <p v-if="errorMsg" class="text-red-700">Please input a query value</p>
    <PhotoView :images="images" />
   </div>
 </template>
@@ -16,7 +17,8 @@ export default {
   data () {
     return {
       images: [],
-      query: ''
+      query: '',
+      errorMsg: null
     }
   },
   methods: {
@@ -43,10 +45,14 @@ export default {
         })
     },
     showPhotos () {
+      if (this.query === '') {
+        this.errorMsg = true
+      }
       if (this.images) {
         this.images = []
         return this.getPhotos()
       }
+      this.errorMsg = false
       return this.getPhotos()
     }
   }

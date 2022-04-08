@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap w-full justify-evenly">
-    <div v-for="(image, index) in images" :key="index" class="m-2">
+    <div v-for="(image, index) in images" :key="index" class="m-2 grow">
       <img :src="image"  alt="dog pictures"  class="sm:w-64 w-40" @click="toggleModal"/>
     </div>
    </div>
