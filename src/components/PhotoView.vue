@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap w-full justify-evenly">
     <div v-for="(image, index) in images" :key="index" class="m-2 grow">
-      <img :src="image"  alt="dog pictures"  class="sm:w-64 w-40" @click="toggleModal"/>
+      <img :src="image"  alt="dog pictures"  class="sm:w-64 w-40 cursor-pointer hover:shadow-2xl hover:w-64 shadow-md" @click="toggleModal"/>
     </div>
    </div>
 </template>
