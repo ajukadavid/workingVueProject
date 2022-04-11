@@ -3,15 +3,16 @@
   <div class="">
     <menu class="sm:flex sm:mt-3 sm:justify-between sm:text-3xl hidden">
       <li class="p-3">
-        <a href="#">Re-Splash 📸</a>
+        <a href="#" class="animate-spin">Re-Splash 📸</a>
       </li>
     </menu>
   </div>
 <!--Mobile Menu-->
-  <div class="sm:hidden">
+  <div class="sm:hidden flex">
     <button @click="toggleMobileMenu">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  class="w-8 relative left-4 mt-3"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
     </button>
+    <h2 class="animate-bounce absolute text-3xl left-60 top-3">Re-splash 📸</h2>
     <transition>
       <nav v-if="mobile" class="bg-amber-200 absolute left-0 top-0 h-screen p-4">
         <button @click="toggleMobileMenu">
@@ -19,10 +20,8 @@
         </button>
         <menu class="grid gap-y-5 w-40 text-2xl relative right-7">
           <li>
-            <a class="text-blue-200" href="#">Home</a>
+            <a class="text-blue-200" href="#">📸</a>
           </li>
-          <li><a class="text-blue-200" href="#">About</a></li>
-          <li><a class="text-blue-200" href="#">Profile</a></li>
         </menu>
       </nav>
     </transition>
