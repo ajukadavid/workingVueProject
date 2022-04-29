@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2 class="font-sans text-xl mt-2">Search For Your favorite images</h2>
-      <input @keydown.enter="showPhotos" type="text" placeholder="Type in a keyword and press enter to search" v-model="query" class="m-4 border-2 p-4 w-96"/>
-    <button @click="showPhotos" class="bg-blue-300 p-4">Search</button>
+    <h2 class=" text-xl mt-2">Search For Your favorite images</h2>
+      <input @keydown.enter="showPhotos" type="text" placeholder="Type in a keyword and press enter to search" v-model="query" class="m-4 border-2 p-4 w-96 focus:outline-none focus:border-amber-500 focus:ring-amber-500"/>
+    <button @click="showPhotos" class="bg-amber-300 p-4 hover:bg-amber-500 hover:rounded-lg">Search</button>
     <p v-if="errorMsg" class="text-red-700">Please input a query value</p>
-   <PhotoView :images="images" />
+   <PhotoView :images="images"/>
   </div>
 </template>
 
@@ -38,7 +38,8 @@ export default {
             console.log('There was an error fetching the photos')
           } else {
             result.response.results.forEach((img) => {
-              this.images.push(img.urls.regular)
+              console.log(img)
+              this.images.push(img)
             })
             this.query = ''
           }
