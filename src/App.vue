@@ -1,12 +1,15 @@
 <template>
   <NavBar />
   <router-view/>
+<FooterComp />
 </template>
 
 <script>
 import NavBar from '@/components/NavBar'
+import FooterComp from '@/components/Footer'
 export default {
   components: {
+    FooterComp,
     NavBar
   }
 }
