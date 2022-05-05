@@ -7,7 +7,7 @@
              inset-x-0
              bottom-0
              p-4">
-    Made with 💖 by <a href="https://github.com/ithiel883"> <i class="fa-brands fa-github"></i> Ithiel </a>
+    Made with 💖 by Ithiel <a href="https://github.com/ithiel883"> <i class="fa-brands text-white fa-github"></i></a> <a href="https://www.linkedin.com/in/david-ajuka-630660144/"><i class="fa-brands text-white fa-linkedin"></i></a>
   </footer>
 </template>
 
