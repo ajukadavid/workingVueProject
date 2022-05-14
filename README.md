@@ -1,5 +1,5 @@
 # Description
-Resplash uses the Unsplash API to query images from user input and display these images to the user in an elegant way 
+This is an open source project that uses the Unsplash API to query images from user input and display these images to the user in an elegant way, feel free to contribute and open issues.
 
 ## Project setup
 ```
