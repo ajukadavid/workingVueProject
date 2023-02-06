@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap w-full justify-evenly">
+  <div class="flex flex-wrap w-full justify-evenly" id="listWrapper">
     <div v-for="(image, index) in images" :key="index" class="m-2 grow">
       <img :src="image.urls.regular"  alt="dog pictures"  class="sm:w-64 w-40 cursor-pointer hover:shadow-2xl hover:w-64 shadow-md" @click="toggleModal"/>
     <span class="mt-4">{{image.alt_description}}</span>
@@ -19,6 +19,9 @@ export default {
     toggleModal (index, item) {
       console.log(index, item)
     }
+  },
+  mounted(){
+    console.log('mounted')
   },
   props: ['images']
 }

@@ -56,7 +56,8 @@ export default {
       this.errorMsg = false
       return this.getPhotos()
     }
-  }
+  },
+
 }
 </script>
 
